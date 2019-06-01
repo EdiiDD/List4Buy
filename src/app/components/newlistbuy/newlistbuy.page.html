@@ -1,0 +1,41 @@
+<div class="card">
+  <ion-card color="light" mode="ios">
+    <ion-card-header>
+      <ion-card-title>Nueva Lista de Compra</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-input size="20%" mode="ios" required="required" type="text" [(ngModel)]="listBuy.title"
+        placeholder="Nombre de la lista">
+        <ion-icon mode="ios" name="cart"></ion-icon>
+      </ion-input>
+
+      <br>
+
+      <ion-input size="20%" mode="ios" required="required" type="text" [(ngModel)]="listBuy.supermarket"
+        placeholder="Super Mercado">
+        <ion-icon mode="ios" name="key"></ion-icon>
+      </ion-input>
+
+      <br>
+
+      <ion-textarea position="stacked" mode="ios" required="required" type="text" [(ngModel)]="listBuy.description"
+        placeholder="Descripcion">
+      </ion-textarea>
+
+      <br>
+
+      <div class="bottom">
+        <ion-button slot="start" color="danger" shape="round" (click)="cancel()">
+          Cancelar
+        </ion-button>
+
+        <ion-button slot="end" color="primary" shape="round" (click)="accept()">
+          Aceptar
+        </ion-button>
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+</div>

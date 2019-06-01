@@ -1,0 +1,24 @@
+.card{
+    background-image: url("../../../assets/images/fondoSuperior.png");
+    background-position: center;
+    background-size: cover;
+    height: 100%; /* You must set a specified height */
+
+    ion-input,  ion-textarea{
+        box-shadow: 1px 1px 1px gray;
+        border-radius: 5px;
+        --color: darkorange;
+        --placeholder-color: black;
+        text-align: center;
+    }
+
+    ion-card-title{
+        text-align: center;
+    }
+
+    .bottom{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}

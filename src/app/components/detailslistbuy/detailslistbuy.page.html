@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-title>Nombre de Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- List of Sliding Items -->
+  <!-- Cuando pincho en un elemento me sale un dialogo para poder cambiarlo -->
+
+
+
+  <ion-list *ngFor="let product of listProduct">
+    <ion-item-sliding>
+      <ion-item no-lines>
+
+        <ion-badge ion-button color="tertiary" slot="start" (click)="numProduct(product.nombre)">
+          {{ product.cantidad }}</ion-badge>
+        <ion-label ion-button mode="ios" (click)="nameProduct(product.nombre)">
+          {{ product.nombre }}
+        </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+
+      </ion-item>
+
+
+
+      <ion-item-options side="end">
+        <ion-item-option mode="ios" color="danger" (click)="eliminar(product.nombre)">Eliminar</ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="center" horizontal="end" edge slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon name="arrow-dropup"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+
+      <ion-fab-button>
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-fab-button>
+
+
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
